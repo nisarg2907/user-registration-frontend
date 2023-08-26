@@ -39,7 +39,7 @@ const register = async (values, onSubmitProps) => {
   console.log(values.picture);
 
   const savedUserResponse = await fetch(
-    "http://localhost:6001/auth/register",
+    "https://app-backend-3zfc.onrender.com/auth/register",
     {
       method: "POST",
       body: formData,

@@ -13,7 +13,7 @@ const UserList = () => {
     setShowRegisterForm(prevState => !prevState);
   };
   useEffect(() => {
-    axios.get('http://localhost:6001/users/all-users')
+    axios.get('https://app-backend-3zfc.onrender.com/users/all-users')
       .then(response => {
         setUsers(response.data.users);
       })

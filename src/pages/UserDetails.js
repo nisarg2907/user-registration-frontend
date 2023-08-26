@@ -22,7 +22,7 @@ const UserDetails = () => {
   const [openPictureDialog, setOpenPictureDialog] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:6001/users/${userId}`)
+    axios.get(`https://app-backend-3zfc.onrender.com/users/${userId}`)
       .then(response => {
         setUser(response.data.user);
       })
@@ -61,7 +61,7 @@ const UserDetails = () => {
     };
 
     try {
-      await axios.put(`http://localhost:6001/users/update-user/${id}`, updatedUserData);
+      await axios.put(`https://app-backend-3zfc.onrender.com/users/update-user/${id}`, updatedUserData);
       setOpenDialog(false);
       setUser({
         ...user,
@@ -77,7 +77,7 @@ const UserDetails = () => {
   };
 
   const deleteUser = () => {
-    axios.delete(`http://localhost:6001/users/${userId}`)
+    axios.delete(`https://app-backend-3zfc.onrender.com/users/${userId}`)
       .then(response => {
         console.log('User deleted successfully:', response.data.message);
         navigate('/');
@@ -98,7 +98,7 @@ const UserDetails = () => {
     <Container maxWidth="md" sx={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1rem' }}>
         <img
-          src={`http://localhost:6001/assets/${user.picturePath}`}
+          src={`https://app-backend-3zfc.onrender.com/assets/${user.picturePath}`}
           alt={`${user.firstName} ${user.lastName}`}
           style={{ width: '200px', height: '200px', borderRadius: '50%', objectFit: 'cover' }}
         />

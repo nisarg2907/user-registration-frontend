@@ -15,7 +15,7 @@ const UserListItem = ({ user }) => {
       <Avatar
         sx={{ width: '100px', height: '100px', marginBottom: '0.5rem' }}
         alt={`${user.firstName} ${user.lastName}`}
-        src={`http://localhost:6001/assets/${user.picturePath}`}
+        src={`https://app-backend-3zfc.onrender.com/assets/${user.picturePath}`}
       />
       <CardContent sx={{ textAlign: 'center' }}>
         <Typography variant="h6" gutterBottom>{user.firstName} {user.lastName}</Typography>

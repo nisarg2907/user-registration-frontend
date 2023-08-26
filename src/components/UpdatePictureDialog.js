@@ -19,7 +19,7 @@ const UpdatePictureDialog = ({ open, onClose, onImageSelect, onPictureUpdate }) 
       formData.append('picture', selectedImage);
 
       try {
-        const response = await fetch(`http://localhost:6001/user/${userId}`, {
+        const response = await fetch(`https://app-backend-3zfc.onrender.com/user/${userId}`, {
           method: 'PUT',
           body: formData,
         });
